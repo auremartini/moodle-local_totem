@@ -1,0 +1,29 @@
+div.totem-fullscreen {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    zoom: 2;
+    -moz-transform: scale(2);
+    -moz-transform-origin: 0 0;
+    background-color: white;
+}
+
+div.totem_fullscreen-msg {
+    width: 100%;
+}
+
+.totem-fullscreen .generaltable th,
+.totem-fullscreen .generaltable td {
+    padding: .6rem;
+}
+
+div.totem-box {
+    display: inline-block;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}

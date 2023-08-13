@@ -1,0 +1,47 @@
+{{!
+	This file is part of Moodle - http://moodle.org/
+
+	Moodle is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	Moodle is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+	@template block_totem/totem_table
+	
+	Show totem as a table
+}}
+<div data-region="totem_fullscreen" class="totem-fullscreen">
+	<span data-region="totem_fullscreen-title" style="font-size: calc(0.9740625rem + 0.88875vw);">LiLu3 {{date_text}}</span>
+	<span><img src="{{logo}}" height="20px" align="right" style="margin-top:10px;"></span>
+	<div data-region="totem_fullscreen-scroll">
+		<table data-region="totem_fullscreen-table" class="generaltable hidden">
+			{{#records}}
+				<tr data-region="totem_fullscreen-table-row">
+				<td class="cell c0" width="40rem" style="{{eventtypecss}}">{{eventtype}}</td>
+				<td class="cell c1" width="80rem"><span style="{{#displayhidden}}color: #868e96;{{/displayhidden}}">{{teacher}}</span></td>
+				<td class="cell c2" width="80rem">{{teaching}}{{#teaching}}&nbsp;{{/teaching}}{{subject}}</td>
+				<td class="cell c3" width="80rem">{{section}}</td>
+				<td class="cell c4" width="160rem">{{time}}</td>
+				<td class="cell c5">{{displaytext}}</td>
+				</tr>
+			{{/records}}
+		</table>
+	</div>	
+	<div data-region="totem_fullscreen-msg" style="margin-bottom: 10px;">
+		<center>{{#calendar}}
+			<div class="totem-box">
+				<b>{{name}}</b>{{#location}}<br /><i><small>{{location}}</small></i>{{/location}}{{#description}}<br />{{{description}}}{{/description}}</i>
+			</div>
+		{{/calendar}}</center>
+		<div>&nbsp;</div>
+	</div>
+</div>
