@@ -31,12 +31,10 @@ $string['plugin_page_title'] = 'Teacher\'s attendences';
 $string['totem:access'] = 'Access the Teacher\'s attendences page';
 $string['totem:config'] = 'Edit configuration';
 $string['totem:filterview'] = 'Show filter interface';
-$string['totem:filterview'] = 'Show filter interface';
 $string['totem:addevent'] = 'Add Totem event';
 $string['totem:editevent'] = 'Edit Totem event';
 $string['totem:deleteevent'] = 'Delete Totem event';
 $string['totem:fullscreen'] = 'Open Totem in fullscreen window';
-$string['totem:filterview'] = 'Show filter interface';
 
 // View page 
 $string['config'] = 'Configure';
@@ -71,7 +69,6 @@ $string['configtimetabledefault'] = '1|08:15|09:00&#13;2|09:05|09:50&#13;3|10:05
 $string['displaytime'] = 'Show times as';
 $string['timeperiod'] = 'period';
 $string['timetime'] = 'hh:mm';
-$string['notes'] = 'Annotations';
 
 // Edit event
 $string['eventtype'] = 'Event type';
@@ -84,6 +81,7 @@ $string['displaytext'] = 'Display message';
 $string['displayevent'] = 'Show event';
 $string['createdinfo'] = 'Created by';
 $string['editedinfo'] = 'Last edit by';
+$string['notes'] = 'Annotations';
 
 //Days of the week
 $string['day-1'] = 'Monday';
