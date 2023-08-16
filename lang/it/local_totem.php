@@ -111,4 +111,5 @@ $string['updateeventerror'] = 'Errore nella modifica al database.';
 
 // Filter
 $string['selectfilter'] = 'Imposta filtro';
-
+$string['displaydatefrom'] = 'Mostra eventi da';
+$string['displaydateto'] = 'Mostra eventi fino a';
