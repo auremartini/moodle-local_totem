@@ -112,4 +112,6 @@ $string['updateeventerror'] = 'Error in updating record in database.';
 
 // Filter
 $string['selectfilter'] = 'Set filter';
+$string['displaydatefrom'] = 'Display date from';
+$string['displaydateto'] = 'Display date to';
 
