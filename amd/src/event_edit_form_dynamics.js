@@ -115,7 +115,7 @@ define(['jquery'], function() {
             // Timetable: timestart
             document.getElementById('id_timestartlist').innerHTML = "";
             var option = document.createElement("option");
-            option.value = '';
+            option.value = '0';
             option.text = '';
             document.getElementById('id_timestartlist').add(option);
 
