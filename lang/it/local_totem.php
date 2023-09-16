@@ -113,3 +113,7 @@ $string['updateeventerror'] = 'Errore nella modifica al database.';
 $string['selectfilter'] = 'Imposta filtro';
 $string['displaydatefrom'] = 'Mostra eventi da';
 $string['displaydateto'] = 'Mostra eventi fino a';
+
+// User display options
+$string['lastnamename'] = 'Cognome Nome';
+$string['lastnameinitial'] = 'Cognome N.';

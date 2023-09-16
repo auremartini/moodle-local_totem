@@ -115,3 +115,6 @@ $string['selectfilter'] = 'Set filter';
 $string['displaydatefrom'] = 'Display date from';
 $string['displaydateto'] = 'Display date to';
 
+// User display options
+$string['lastnamename'] = 'Lastname Name';
+$string['lastnameinitial'] = 'Lastname N.';

@@ -55,6 +55,8 @@ class config_edit_form extends \moodleform {
         $TEACHERSDISPLAY = array();
         $TEACHERSDISPLAY[0] = get_string('idnumber', 'moodle');
         $TEACHERSDISPLAY[1] = get_string('lastname', 'moodle');
+        $TEACHERSDISPLAY[2] = get_string('lastnamename', 'local_totem');
+        $TEACHERSDISPLAY[3] = get_string('lastnameinitial', 'local_totem');
         $mform->addElement('select', 'config_teachingshow', get_string('configteachingshow', 'local_totem'), $TEACHERSDISPLAY);
         
         // Teachers list

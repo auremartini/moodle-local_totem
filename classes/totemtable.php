@@ -98,6 +98,12 @@ class totemtable extends \external_api implements \renderable, \templatable {
             case 1: //$TEACHERSDISPLAY[1] = get_string('lastname', 'moodle');
                 $teacherfield = 'u.lastname';
                 break;
+            case 2: //$TEACHERSDISPLAY[1] = get_string('lastnamename', 'local_totem');
+                $teacherfield = 'CONCAT(u.lastname, " ", u.firstname)';
+                break;
+            case 3: //$TEACHERSDISPLAY[1] = get_string('lastnameinitial', 'local_totem');
+                $teacherfield = 'CONCAT(u.lastname, " ", MID(u.firstname, 1, 1), ".")';
+                break;
             default: //$TEACHERSDISPLAY[0] = get_string('idnumber', 'moodle');
                 $teacherfield = 'u.idnumber';
         }
