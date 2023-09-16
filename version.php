@@ -25,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'local_totem';
-$plugin->version = 2023091601;
+$plugin->version = 2023091602;
 
 $plugin->requires = 2014051200; // Moodle 2.7.0 is required.
 $plugin->supported = [37, 41]; // Moodle 3.7.x, 3.8.x, 3.9.x, 4.0.x and 4.1.x are supported.

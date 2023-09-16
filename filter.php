@@ -88,4 +88,5 @@ $totem = new \local_totem\data\totemtable([
 
 echo $PAGE->get_renderer('local_totem')->render_list($totem);
 
+$PAGE->requires->js_call_amd('local_totem/delete_confirm', 'init', array());
 echo $OUTPUT->footer();
