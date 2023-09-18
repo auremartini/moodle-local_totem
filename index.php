@@ -1,2 +1,2 @@
 <?php 
-    require(view.php);
+    require('view.php');
