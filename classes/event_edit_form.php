@@ -63,6 +63,8 @@ class event_edit_form extends \moodleform {
         $mform->setType('timestart', PARAM_TEXT);
         $mform->addElement('hidden', 'timeend');
         $mform->setType('timeend', PARAM_TEXT);
+        $mform->addElement('hidden', 'displaytexttemplate');
+        $mform->setType('displaytexttemplate', PARAM_TEXT);
         $mform->addElement('hidden', 'blank');
         $mform->setType('blank', PARAM_TEXT);
         
@@ -76,11 +78,13 @@ class event_edit_form extends \moodleform {
         
         $TIME_END = array();
         
+        $MSG_TEMPLATES = array();
+        
         $mform->addElement('header', 'generalhdr', get_string('general'));
 
         // add type element
         $mform->addElement('select', 'eventtypelist', get_string('eventtype', 'local_totem'), $EVENT_TYPES);
-        $mform->setType('eventtype', PARAM_TEXT);
+        $mform->setType('eventtypelist', PARAM_TEXT);
         
         // add teacher element
         $mform->addElement('select', 'useridlist', get_string('teacher', 'local_totem'), $TEACHER_LIST);
@@ -113,7 +117,11 @@ class event_edit_form extends \moodleform {
         $mform->setType('time', PARAM_TEXT);
         
         // add message element
-        $mform->addElement('text', 'displaytext', get_string('displaytext', 'local_totem'), array('size'=>'255'));
+        $a = array();
+        $a[] =& $mform->createElement('select', 'displaytexttemplatelist', '', $MSG_TEMPLATES);
+        $a[] =& $mform->createElement('text', 'displaytext', '', array('size'=>'50'));
+        $mform->addGroup($a, 'displaytextsection', get_string('displaytext', 'local_totem'), '', FALSE);
+        $mform->setType('displaytexttemplatelist', PARAM_TEXT);
         $mform->setType('displaytext', PARAM_TEXT);
         
         // add displayevent element

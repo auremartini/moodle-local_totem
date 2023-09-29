@@ -184,6 +184,31 @@ define(['jquery'], function() {
 
             // Trigger Timetable timestart event
             document.getElementById('id_timestartlist').dispatchEvent(new Event('change'));
+
+            // Message templates
+            document.getElementById('id_displaytexttemplatelist').innerHTML = "";
+            var option = document.createElement("option");
+            option.value = '';
+            option.text = '';
+            document.getElementById('id_displaytexttemplatelist').add(option);
+
+            var list = params.msgtemplates.split('\r\n');
+            list.forEach(function(item) {
+                var option = document.createElement("option");
+                option.value = item;
+                option.text = item;
+                document.getElementById('id_displaytexttemplatelist').add(option);
+                if (document.getElementById('id_displaytext').value.substring(0, item.length).valueOf() == item.valueOf()) {
+                    document.getElementById('id_displaytext').value =
+                        document.getElementById('id_displaytext').value.slice(item.length);
+                    document.getElementById('id_displaytexttemplatelist').value = item;
+                }
+            });
+
+            document.getElementById('id_displaytexttemplatelist').addEventListener('change', function() {
+                document.getElementsByName('displaytexttemplate')[0].value =
+                    document.getElementById('id_displaytexttemplatelist').value;
+            });
         }
     };
 });

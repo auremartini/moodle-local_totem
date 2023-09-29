@@ -61,6 +61,7 @@ if ($action == 'delete') {
     redirect($return);
 } else if ($record = $form->get_data()) {
     // New record or edited record
+    $record->displaytext = $form->get_data()->displaytexttemplate . $form->get_data()->displaytext;
     if ($id != 0) {
         $record->editedby = $USER->id;
         $record->editeddate = time();
@@ -148,7 +149,8 @@ $PAGE->requires->js_call_amd('local_totem/event_edit_form_dynamics', 'init', arr
     'eventtypelist' => $local_totem_config['config_eventtypelist'],
     'blockteachings' => $local_totem_config['config_teachings'],
     'source' => $local_totem_config['config_source'],
-    'sourceid' => ($local_totem_config['config_source'] == 0 ? $local_totem_config['config_sourceroleid'] : $local_totem_config['config_sourcecohortid'])
+    'sourceid' => ($local_totem_config['config_source'] == 0 ? $local_totem_config['config_sourceroleid'] : $local_totem_config['config_sourcecohortid']),
+    'msgtemplates' => $local_totem_config['config_eventmsgtemplates']
 ]));
 
 // PRINT CONTENT TO PAGE

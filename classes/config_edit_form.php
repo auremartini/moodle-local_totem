@@ -113,6 +113,11 @@ class config_edit_form extends \moodleform {
         $mform->setDefault('config_displayviewtime', 1);
         $mform->setType('config_displayviewtime', PARAM_INT);
         
+        // Event messages template list
+        $mform->addElement('textarea', 'config_eventmsgtemplates', get_string('configeventmsgtemplates', 'local_totem'), array('cols'=>'50', 'rows'=>'4'));
+        $mform->setDefault('config_eventmsgtemplates', '');
+        
+        
         // Display table settings
         $mform->addElement('header', 'generalhdr', get_string('viewtableheader', 'local_totem'));
         $DISPLAYOPTION = array();
