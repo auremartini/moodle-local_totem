@@ -115,8 +115,9 @@ class config_edit_form extends \moodleform {
 
         // Timetable input
         $a = array();
-        $a[] = $mform->createElement('radio', 'config_inputtimes', '', get_string('timeperiod', 'local_totem'), 1);
-        $a[] = $mform->createElement('radio', 'config_inputtimes', '', get_string('timetime', 'local_totem'), 0);
+        $a[] = $mform->createElement('radio', 'config_inputtimes', '', get_string('timeperiod', 'local_totem'), 0);
+        $a[] = $mform->createElement('radio', 'config_inputtimes', '', get_string('timetime', 'local_totem'), 1);
+        $a[] = $mform->createElement('radio', 'config_inputtimes', '', get_string('timecombo', 'local_totem'), 2);
         $mform->addGroup($a, 'config_inputtimes', get_string('inputtimes', 'local_totem'), array(' '), FALSE);
         $mform->setDefault('config_inputtimes', 0);
         $mform->setType('config_inputtimes', PARAM_INT);

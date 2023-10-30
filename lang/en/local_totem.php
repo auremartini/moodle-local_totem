@@ -71,6 +71,7 @@ $string['displaytime'] = 'Show times as';
 $string['inputtimes'] = 'Input time as';
 $string['timeperiod'] = 'period';
 $string['timetime'] = 'hh:mm';
+$string['timecombo'] = 'period (hh:mm)';
 
 // Edit event
 $string['eventtype'] = 'Event type';

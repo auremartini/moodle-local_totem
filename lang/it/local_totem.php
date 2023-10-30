@@ -70,6 +70,7 @@ $string['displaytime'] = 'Mostra orari come';
 $string['inputtimes'] = 'Inserisci orari come';
 $string['timeperiod'] = 'blocco griglia';
 $string['timetime'] = 'hh:mm';
+$string['timecombo'] = 'blocco (hh:mm)';
 
 // Edit event
 $string['eventtype'] = 'Tipologia';

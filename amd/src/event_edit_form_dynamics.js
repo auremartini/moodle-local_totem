@@ -124,7 +124,16 @@ define(['jquery'], function() {
                 var val = item.split('|');
                 var option = document.createElement("option");
                 option.value = val[0];
-                option.text = (params.inputimes == '1' ? val[1] : val[0]);
+                switch (params.inputtimes) {
+                    case 1:
+                        option.text = val[1];
+                        break;
+                    case 2:
+                        option.text = val[0] + ' (' + val[1] + ')';
+                        break;
+                    default:
+                        option.text = val[0];
+                }
                 document.getElementById('id_timestartlist').add(option);
             });
 
@@ -168,7 +177,16 @@ define(['jquery'], function() {
                 var val = item.split('|');
                 var option = document.createElement("option");
                 option.value = val[0];
-                option.text = (params.inputimes == '1' ? val[2] : val[0]);
+                switch (params.inputtimes) {
+                    case 1:
+                        option.text = val[2];
+                        break;
+                    case 2:
+                        option.text = val[0] + ' (' + val[2] + ')';
+                        break;
+                    default:
+                        option.text = val[0];
+                }
                 document.getElementById('id_timeendlist').add(option);
             });
 
