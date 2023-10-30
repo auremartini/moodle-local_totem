@@ -67,6 +67,7 @@ $string['configtimetable'] = 'Griglia oraria';
 $string['configtimetabledefault'] = '1|08:15|09:00&#13;2|09:05|09:50&#13;3|10:05|10:50&#13;4|10:55|11:40&#13;5|11:45|12:30&#13;6|12:30|13:15&#13;7|13:20|14:05&#13;8|14:10|14:55&#13;9|15:05|15:50&#13;10|15:55|16:40&#13;11|16:45|17:30';
 $string['configeventmsgtemplates'] = 'Lista dei messaggi preimpostati';
 $string['displaytime'] = 'Mostra orari come';
+$string['inputtimes'] = 'Inserisci orari come';
 $string['timeperiod'] = 'blocco griglia';
 $string['timetime'] = 'hh:mm';
 

@@ -52,6 +52,7 @@
 				{{#copybtn}}<a href="event.php?id={{id}}&url={{url}}&action=copy"><i class="icon fa fa-copy fa-fw " title="{{#str}} copytotemevent, local_totem {{/str}}" aria-label="{{#str}} copytotemevent, local_totem {{/str}}"></i></a>{{/copybtn}}
 				{{#showbtn}}<a href="event.php?id={{id}}&url={{url}}&action={{displayevent}}"><i class="icon fa fa-{{displayevent}} fa-fw " title="{{#displayhidden}}{{#str}} showtotemevent, local_totem {{/str}}{{/displayhidden}}{{^displayhidden}}{{#str}} hidetotemevent, local_totem {{/str}}{{/displayhidden}}" aria-label="{{#str}} showtotemevent, local_totem {{/str}}"></i></a>{{/showbtn}}
 				{{#delete}}<a href="#" src="event.php?id={{id}}&url={{url}}" class="icon-delete"><i class="icon fa fa-trash fa-fw " title="{{#str}} deletetotemevent, local_totem {{/str}}" aria-label="{{#str}} deletetotemevent, local_totem {{/str}}"></i></a>{{/delete}}
+				{{#editbtn}}<a href="#"><i class="icon fa fa-sticky-note fa-fw " title="{{notes}}" aria-label="{{notes}}"></i></a>{{/editbtn}}
 			</td>
 			</tr>
 		{{/records}}

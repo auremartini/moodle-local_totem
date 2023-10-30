@@ -110,8 +110,17 @@ class config_edit_form extends \moodleform {
         $a[] = $mform->createElement('radio', 'config_displayviewtime', '', get_string('timeperiod', 'local_totem'), 1);
         $a[] = $mform->createElement('radio', 'config_displayviewtime', '', get_string('timetime', 'local_totem'), 0);
         $mform->addGroup($a, 'displaytime', get_string('displaytime', 'local_totem'), array(' '), FALSE);
-        $mform->setDefault('config_displayviewtime', 1);
+        $mform->setDefault('config_displayviewtime', 0);
         $mform->setType('config_displayviewtime', PARAM_INT);
+
+        // Timetable input
+        $a = array();
+        $a[] = $mform->createElement('radio', 'config_inputtimes', '', get_string('timeperiod', 'local_totem'), 1);
+        $a[] = $mform->createElement('radio', 'config_inputtimes', '', get_string('timetime', 'local_totem'), 0);
+        $mform->addGroup($a, 'config_inputtimes', get_string('inputtimes', 'local_totem'), array(' '), FALSE);
+        $mform->setDefault('config_inputtimes', 0);
+        $mform->setType('config_inputtimes', PARAM_INT);
+        
         
         // Event messages template list
         $mform->addElement('textarea', 'config_eventmsgtemplates', get_string('configeventmsgtemplates', 'local_totem'), array('cols'=>'50', 'rows'=>'4'));

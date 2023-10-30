@@ -121,10 +121,10 @@ define(['jquery'], function() {
 
             var list = params.timetable.split('\n');
             list.forEach(function(item) {
-                var params = item.split('|');
+                var val = item.split('|');
                 var option = document.createElement("option");
-                option.value = params[0];
-                option.text = params[1];
+                option.value = val[0];
+                option.text = (params.inputimes == '1' ? val[1] : val[0]);
                 document.getElementById('id_timestartlist').add(option);
             });
 
@@ -165,10 +165,10 @@ define(['jquery'], function() {
 
             var list = params.timetable.split('\n');
             list.forEach(function(item) {
-                var params = item.split('|');
+                var val = item.split('|');
                 var option = document.createElement("option");
-                option.value = params[0];
-                option.text = params[2];
+                option.value = val[0];
+                option.text = (params.inputimes == '1' ? val[2] : val[0]);
                 document.getElementById('id_timeendlist').add(option);
             });
 

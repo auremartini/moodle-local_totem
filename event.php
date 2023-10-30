@@ -143,9 +143,20 @@ $form->set_data([
     'sourceid' => ($local_totem_config['config_source'] == 0 ? $local_totem_config['config_sourceroleid'] : $local_totem_config['config_sourcecohortid'])
 ]);
 
+//SET SETTINGS OPTIONS
+switch($local_totem_config['config_timetable']) {
+    case '1': //Input times on grid number
+        $timetable = $local_totem_config['config_timetable'];
+        break;
+    default:
+        $timetable = $local_totem_config['config_timetable'];
+}
+
+
 // SET PAGE ELEMENTS (HEADER)
 $PAGE->requires->js_call_amd('local_totem/event_edit_form_dynamics', 'init', array([
     'timetable' => $local_totem_config['config_timetable'],
+    'inputtimes' => $local_totem_config['config_inputtimes'],
     'eventtypelist' => $local_totem_config['config_eventtypelist'],
     'blockteachings' => $local_totem_config['config_teachings'],
     'source' => $local_totem_config['config_source'],

@@ -132,7 +132,6 @@ class event_edit_form extends \moodleform {
         $mform->setDefault('displayevent', 1);
         $mform->setType('displayevent', PARAM_INT);
         
-        
         // add section element
         $mform->addElement('textarea', 'notes', get_string('notes', 'local_totem'), array('cols'=>'50', 'rows'=>'4'));
         $mform->setType('notes', PARAM_TEXT);
