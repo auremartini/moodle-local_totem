@@ -24,40 +24,40 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-function local_totem_extend_navigation(global_navigation $navigation) {
-    global $CFG, $PAGE;
-
-    if (has_capability('local/totem:config', context_system::instance()) && isloggedin()) {
-        // Add room planner link to navbar
-        // Initialize node variables.
-        $nodeurl = '/local/totem/view.php';
-        $nodetitle = get_string('plugin_navbar_lavel', 'local_totem');
-        $nodekey = 'totem-page';
-        $icon = new pix_icon('Monitor-Vertical-icon', '', 'local_totem');
-    
-        // Create custom node.
-        $customnode = navigation_node::create(
-            $nodetitle,
-            $nodeurl,
-            global_navigation::TYPE_CUSTOM,
-            null,
-            $nodekey,
-            $icon
-        );
-    
-        // Show the custom node in Boost's nav drawer if requested.
-        $customnode->showinflatnavigation = true;
-    
-        // For some crazy reason, if we add the child node directly to the parent node, it is not shown in the
-        // course navigation section.
-        // Thus, add the custom node to the given navigation_node.
-        // This line generate a debug message on home (not logged in) page
-        $navigation->add_node($customnode, 'home');
-    
-        // And change the parent node directly afterwards.
-        $customnode->set_parent($navigation);
-    }
-}
+//function local_totem_extend_navigation(global_navigation $navigation) {
+//    global $CFG, $PAGE;
+//
+//    if (has_capability('local/totem:config', context_system::instance()) && isloggedin()) {
+//        // Add room planner link to navbar
+//        // Initialize node variables.
+//        $nodeurl = '/local/totem/view.php';
+//        $nodetitle = get_string('plugin_navbar_lavel', 'local_totem');
+//        $nodekey = 'totem-page';
+//        $icon = new pix_icon('Monitor-Vertical-icon', '', 'local_totem');
+//    
+//        // Create custom node.
+//        $customnode = navigation_node::create(
+//            $nodetitle,
+//            $nodeurl,
+//            global_navigation::TYPE_CUSTOM,
+//            null,
+//            $nodekey,
+//            $icon
+//        );
+//    
+//        // Show the custom node in Boost's nav drawer if requested.
+//        $customnode->showinflatnavigation = true;
+//    
+//        // For some crazy reason, if we add the child node directly to the parent node, it is not shown in the
+//        // course navigation section.
+//        // Thus, add the custom node to the given navigation_node.
+//        // This line generate a debug message on home (not logged in) page
+//        $navigation->add_node($customnode, 'home');
+//    
+//        // And change the parent node directly afterwards.
+//        $customnode->set_parent($navigation);
+//    }
+//}
 
 $local_totem_config = null;
 function local_totem_load_configuration() {
